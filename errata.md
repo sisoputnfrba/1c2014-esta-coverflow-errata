@@ -11,7 +11,7 @@ Está Coverflow - Fé de erratas
 
 * El PLP pondrá a todos los Programas recién creados en la cola de New y, en la medida en que el Grado de Multiprogramación lo permita, moverá los Programas de New a Ready, seleccionando según el algoritmo SJN.
 
-* En el enunciado lo nombra poco, así que lo reafirmamos: efectivamente, el PLP planifica según el algoritmo Round Robin.
+* En el enunciado lo nombra poco, así que lo reafirmamos: efectivamente, el PCP planifica según el algoritmo Round Robin.
 
 * En la lista de tareas a realizar del PCP dice:
 > Recibirá los PCB del PLP y los encolará en la cola de READY, según el algoritmo de planificación de corto plazo Round Robin.
