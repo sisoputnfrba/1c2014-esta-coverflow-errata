@@ -8,6 +8,11 @@ Está Coverflow - Fé de erratas
 * El “Diagrama de Estados de un proceso en el sistema” tiene una transición de más desde Ready hacia el PLP. El Diagrama corregido es el siguiente:
 
 ![Diagrama de Estados corregido](diagrama_estados.png)
+
+* El PLP pondrá a todos los Programas recién creados en la cola de New y, en la medida en que el Grado de Multiprogramación lo permita, moverá los Programas de New a Ready, seleccionando según el algoritmo SJN.
+
+* En el enunciado lo nombra poco, así que lo reafirmamos: efectivamente, el PLP planifica según el algoritmo Round Robin.
+
 * En la lista de tareas a realizar del PCP dice:
 > Recibirá los PCB del PLP y los encolará en la cola de READY, según el algoritmo de planificación de corto plazo Round Robin.
 
@@ -18,3 +23,18 @@ Está Coverflow - Fé de erratas
  >En el código Ansisop el identificador de la variable compartida, para diferenciarlo de las variables normales, comenzará con el caracter signo de admiración (!), seguido del identificador de un caracter alfabético, por ejemplo: !a, !g, !q
 
  La restricción de un único caracter alfabético es incorrecta. Las variables globales se identifican con un `!` y luego una cadena alfanumérica, como correctamente dice la página 18. Por ejemplo, `!a`, `!A`, `!compartida`, `!ParaTodos`, `!Compartidas10`.
+
+* Estructura del PCB: aclaramos el tipo de cada dato.
+
+| Estructura                 | Tipo      |
+|----------------------------|-----------|
+| Identificador único        | Numérico  |
+| Segmento de código         | Dirección |
+| Segmento de stack          | Dirección |
+| Cursor del stack           | Dirección |
+| Índice de código           | Dirección |
+| Índice de etiquetas        | Dirección |
+| Program counter            | Numérico  |
+| Tamaño del Contexto Actual | Numérico  |
+
+* Las primitivas `llamarSinRetorno` y `llamarConRetorno` figuran en el enunciado con un parámetro `t_puntero_instruccion linea_en_ejecuccion` que no aparece en la documentación del Parser. Efectivamente ese parámetro se eliminó de la interfaz, y **no deberá usarse**. Como nota general, ante una incongruencia entre la documentación del Parser y la especificación de AnSISOP que figura como Anexo del TP, la documentación del Parser prevalecerá.
