@@ -24,21 +24,22 @@ Está Coverflow - Fé de erratas
 
  La restricción de un único caracter alfabético es incorrecta. Las variables globales se identifican con un `!` y luego una cadena alfanumérica, como correctamente dice la página 18. Por ejemplo, `!a`, `!A`, `!compartida`, `!ParaTodos`, `!Compartidas10`.
 
+* El PCB debe incluir un campo numérico con el tamaño del segmento Índice de Etiquetas, a fin de que la CPU pueda obtenerlo de la UMV para la búsqueda de etiquetas.
+
 * Estructura del PCB: aclaramos el tipo de cada dato.
 
-| Estructura                 | Tipo      |
-|----------------------------|-----------|
-| Identificador único        | Numérico  |
-| Segmento de código         | Dirección |
-| Segmento de stack          | Dirección |
-| Cursor del stack           | Dirección |
-| Índice de código           | Dirección |
-| Índice de etiquetas        | Dirección |
-| Program counter            | Numérico  |
-| Tamaño del Contexto Actual | Numérico  |
+| Estructura                 | Tipo      | Descripción |
+|----------------------------|-----------|-------------|
+| Identificador único        | Numérico  | Identificador único del Programa en el sistema |
+| Segmento de código         | Dirección | Dirección del primer byte en la UMV del segmento de código |
+| Segmento de stack          | Dirección | Dirección del primer byte en la UMV del segmento de stack |
+| Cursor del stack           | Dirección | Dirección del primer byte en la UMV del Contexto de Ejecución Actual |
+| Índice de código           | Dirección | Dirección del primer byte en la UMV del Índice de Código |
+| Índice de etiquetas        | Dirección | Dirección del primer byte en la UMV del Índice de Etiquetas |
+| Program counter            | Numérico  | Número de la próxima instrucción a ejecutar |
+| Tamaño del Contexto Actual | Numérico  | Cantidad de variables (locales y parámetros) del Contexto de Ejecución Actual |
+| Tamaño Índice de etiquetas | Numérico  | Cantidad de bytes que ocupa el Índice de etiquetas |
 
 * Las primitivas `llamarSinRetorno` y `llamarConRetorno` figuran en el enunciado con un parámetro `t_puntero_instruccion linea_en_ejecuccion` que no aparece en la documentación del Parser. Efectivamente ese parámetro se eliminó de la interfaz, y **no deberá usarse**. Como nota general, ante una incongruencia entre la documentación del Parser y la especificación de AnSISOP que figura como Anexo del TP, la documentación del Parser prevalecerá.
-
-* El PCB debe incluir un campo numérico con el tamaño del segmento Índice de Etiquetas, a fin de que la CPU pueda obtenerlo de la UMV para la búsqueda de etiquetas.
 
 * La CPU deberá obtener por archivo de configuración con la IP y Puerto del Kernel y los de la UMV.
