@@ -1,4 +1,4 @@
-Está Coverflow - Fé de erratas
+Está Coverflow - Fe de erratas
 ==============================
 
 Este repositorio contiene la fe de erratas para el enunciado del Trabajo Práctico "Está Coverflow" del 1er cuatrimestre de 2014 de Sistemas Operativos de la UTN FRBA.
