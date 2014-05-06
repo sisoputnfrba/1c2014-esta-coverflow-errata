@@ -43,3 +43,8 @@ Está Coverflow - Fé de erratas
 * Las primitivas `llamarSinRetorno` y `llamarConRetorno` figuran en el enunciado con un parámetro `t_puntero_instruccion linea_en_ejecuccion` que no aparece en la documentación del Parser. Efectivamente ese parámetro se eliminó de la interfaz, y **no deberá usarse**. Como nota general, ante una incongruencia entre la documentación del Parser y la especificación de AnSISOP que figura como Anexo del TP, la documentación del Parser prevalecerá.
 
 * La CPU deberá obtener por archivo de configuración con la IP y Puerto del Kernel y los de la UMV.
+
+* Al pie de la página 13, el enunciado dice :
+> si el Programa B solicita 5 bytes iniciando en la posición 25 (15 bytes de offset del inicio del segmento 2)
+
+  El ejemplo es incorrecto, dado que la UMV especifica que los pedidos deben hacerse especificando base del segmento y offset por separado. En los casos citados, debería  hacer pedidos de 5 bytes con offset 15 a partir de la base 10 (`leer(10, 15, 5)`).
