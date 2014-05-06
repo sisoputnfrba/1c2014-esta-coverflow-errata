@@ -48,3 +48,5 @@ Está Coverflow - Fé de erratas
 > si el Programa B solicita 5 bytes iniciando en la posición 25 (15 bytes de offset del inicio del segmento 2)
 
   El ejemplo es incorrecto, dado que la UMV especifica que los pedidos deben hacerse especificando base del segmento y offset por separado. En los casos citados, debería  hacer pedidos de 5 bytes con offset 15 a partir de la base 10 (`leer(10, 15, 5)`).
+
+* En la UMV, la operación de handshake dice incluir un parámetro Identificador del Programa. Ese dato sobra, y no deberá ser enviado. La operación handshake sólo tiene como parámetro el tipo de proceso: Kernel o CPU.
