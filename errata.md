@@ -3,7 +3,7 @@ Está Coverflow - Fé de erratas
 
 * En el archivo de configuración de la UMV falta el tamaño del bloque de memoria que funcionará como memoria principal.
 * En el archivo de configuración del Kernel falta la IP/Puerto de la UMV.
-* El enunciado del TP dice que el Stack tiene un tamaño fijo de 100 bytes. Lo correcto es que el tamaño del Stack sea configurable por archivo de configuración.
+* El enunciado del TP dice que el Stack tiene un tamaño fijo de 100 bytes. Lo correcto es que el tamaño del Stack sea configurable en el archivo de configuración del Kernel.
 * En el archivo de configuración del Kernel faltan las variables globales.
 * El “Diagrama de Estados de un proceso en el sistema” tiene una transición de más desde Ready hacia el PLP. El Diagrama corregido es el siguiente:
 
