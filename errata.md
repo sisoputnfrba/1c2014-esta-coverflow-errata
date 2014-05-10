@@ -50,3 +50,5 @@ Está Coverflow - Fé de erratas
   El ejemplo es incorrecto, dado que la UMV especifica que los pedidos deben hacerse especificando base del segmento y offset por separado. En los casos citados, debería  hacer pedidos de 5 bytes con offset 15 a partir de la base 10 (`leer(10, 15, 5)`).
 
 * En la UMV, la operación de handshake dice incluir un parámetro Identificador del Programa. Ese dato sobra, y no deberá ser enviado. La operación handshake sólo tiene como parámetro el tipo de proceso: Kernel o CPU.
+
+* En la sección "System Calls", en la página 7, el enunciado dice que sólo existen 5 system calls: `obtener_valor`, `grabar_valor`, `wait`, `signal` y `entrada_salida`. En realidad existen otras dos más, como se especifica en el Anexo V: `imprimir` e `imprimirTexto`.
