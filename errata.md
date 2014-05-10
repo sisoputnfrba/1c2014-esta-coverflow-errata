@@ -52,3 +52,5 @@ Está Coverflow - Fé de erratas
 * En la UMV, la operación de handshake dice incluir un parámetro Identificador del Programa. Ese dato sobra, y no deberá ser enviado. La operación handshake sólo tiene como parámetro el tipo de proceso: Kernel o CPU.
 
 * En la sección "System Calls", en la página 7, el enunciado dice que sólo existen 5 system calls: `obtener_valor`, `grabar_valor`, `wait`, `signal` y `entrada_salida`. En realidad existen otras dos más, como se especifica en el Anexo V: `imprimir` e `imprimirTexto`.
+
+* En la sección "Fin de la ejecución", en la página 12, el enunciado dice que _"el CPU deberá solicitar la destrucción de todas las estructuras correspondientes [...] y notificarle al PCP que el proceso finalizó"_. En realidad, no es responsabilidad directa del CPU solicitar la destrucción de las estructuras correspondientes: la CPU debe hacer lo necesario para que quien tenga la responsabilidad de destruir las estructuras se entere de que es momento de hacerlo.
