@@ -55,7 +55,8 @@ Está Coverflow - Fé de erratas
 
 * En la sección "Fin de la ejecución", en la página 12, el enunciado dice que _"el CPU deberá solicitar la destrucción de todas las estructuras correspondientes [...] y notificarle al PCP que el proceso finalizó"_. En realidad, no es responsabilidad directa del CPU solicitar la destrucción de las estructuras correspondientes: la CPU debe hacer lo necesario para que quien tenga la responsabilidad de destruir las estructuras se entere de que es momento de hacerlo.
 
-14-06-2014
-----------
 * En el enunciado, seccion UMV, consola, donde dice _"dump: Este comando generará un reporte en pantalla y opcionalmente en un archivo en disco."_ Deberia decir "dump: Este comando generará un reporte en un archivo en disco, escribiendo el contenido siempre al final del mismo (append)."
+
 * La UMV no logueará por pantalla, escribira unicamente en un archivo de log. Esto es para evitar confusiones al momento de escribir comandos en la consola de la misma. Unicamente se escribirán por pantalla los resultados de dichos comandos (a excepcion del comando "dump", que siempre escribe el reporte en un archivo aparte en disco).
+
+* En el Kernel se debe poder visualizar en todo momento el estado de las distintas colas (nuevos, listos, bloqueados -i/o, semaforos-, ejecutando, finalizados).
